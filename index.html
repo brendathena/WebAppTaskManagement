@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        // Check the screen width and redirect to the mobile version of the website
+        if (window.innerWidth <= 600) {
+            window.location.href = "https://github.com/brendathena";
+        }
+    </script>
+    <div id="overlay"></div>
+    <header id="header">
+        <div class="profile">
+            <img src="assets\profileIcon.svg" alt="profile avatar" id="profile-icon">
+            <span id="greeting">Hey there, you!</span>
+            <button type="button" id="edit-name" onclick="openNamePopUp()">Edit Name</button>
+        </div>
+        <h1 id="title">Task Management WebApp</h1>
+    </header>
+    <!-- Pop-up -->
+    <div id="name-popup">
+        <p id="explanation">It's nice to see you, please tell me your preferred name.</p>
+        <input type="text" id="name-input" placeholder="Your Name">
+        <p id="warning">Careful: clearing your cache and cookies will result in your data to be erased including name and tasks.</p>
+        <button id="submit-name" onclick="saveName()">Submit</button>
+    </div>
+        <div id="input-task-frame">
+            <input type="text" id="input-task" placeholder="Enter a new task">
+            <select id="priority-input">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+            </select>
+            <button type="button" id="add-task" onclick="addTask()">Add Task</button>
+        </div>
+        <div class="list" id="p0">
+            <p class="p-title">P0</p>
+        </div>
+        <div class="list" id="p1">
+            <p class="p-title">P1</p>
+        </div>
+        <div class="list" id="p2">
+            <p class="p-title">P2</p>
+        </div>
+        <div class="list" id="done">
+            <p class="p-title">Done</p>
+        </div>
+    <footer id="footer">
+        <div id="logo-div">
+            <a href="https://github.com/brendathena" target="_blank" id="portfolio-link"><img src="assets/logo.svg" alt="logo" id="logo"></a>
+            <p id="footer-text">See more of my work <a href="https://github.com/brendathena" target="_blank" id="footer-text-link">here</a></p>
+        </div>
+        <div id="socials">
+            <a href="https://github.com/brendathena" target="_blank" id="github-link"><img src="assets/github.svg" alt="github" id="github"></a>
+            <a href="https://www.linkedin.com/in/brendathena/" target="_blank" id="linkedin-link"><img src="assets/linkedin.svg" alt="linkedin" id="linkedin"></a>
+            <a href="mailto:brendathena@gmail.com?subject=Contact&body=Hello%20Sant'Anna," target="_blank" id="gmail-link"><img src="assets/gmail.svg" alt="email" id="gmail"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
